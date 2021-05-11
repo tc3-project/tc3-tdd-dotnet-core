@@ -29,14 +29,6 @@ namespace TC3 {
         {
             services.AddMvc(options => options.EnableEndpointRouting = false);
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_3_0);
-
-            // Modified the database context to use Sqlite3
-            // services.AddDbContext<TC3Context>(options => options.UseSqlServer(Configuration.GetConnectionString(name: "DefaultConnection")).EnableSensitiveDataLogging());
-            services.AddDbContext<TC3Context>(options => options.UseSqlite(Configuration.GetConnectionString(name: "DefaultConnection")).EnableSensitiveDataLogging());
-
-            // Added the service classes as singletons
-            services.AddScoped<ISalesOrdersService, SalesOrdersService>();
-            services.AddScoped<ISalesOrderManager, SalesOrderManager>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

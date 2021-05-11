@@ -45,6 +45,6 @@ The versions are tagged in GIT as v1.0, etc.
 
 * Version 1.0 - Initial release of a new project core with starter and final entity-relationship diagrams.
 * Version 1.1 - Updated README.md.
-
+git
 <hr>
 Copyright © 2019-2020 Joel A Mussman. All rights reserved.
