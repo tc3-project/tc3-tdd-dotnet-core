@@ -1,0 +1,8 @@
+**/.DS_STORE
+.editorignore
+.vs/
+.vscode/
+.DS_Store
+bin/
+obj/
+packages/

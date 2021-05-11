@@ -1,0 +1,17 @@
+﻿bool result = false;
+int parity = cardNumber.Length % 2;
+int sum = 0;
+
+for (int i = cardNumber.Length - 1; i >= 0; --i) {
+
+    int digit = (int)Char.GetNumericValue(cardNumber[i]) * ((i % 2 == parity) ? 2 : 1);
+
+    sum += (digit > 9) ? digit - 9 : digit;
+}
+
+if (sum > 0 && sum % 10 == 0) {
+
+    result = true;
+}
+
+return result;
